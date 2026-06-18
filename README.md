@@ -1,23 +1,17 @@
-Trabajo Práctico Integrador: Computación Aplicada
-Este repositorio contiene la entrega formal del Trabajo Práctico Integrador Grupal para la materia. A continuación se detallan los integrantes del equipo y la estructura de los archivos entregados.
 
-.Integrantes del Grupo
-Ana Wu
-Constanza De Luca
-Adriano Pérez
-Nahuel Cattaneo
+TP Integrador - Computación
 
-Contenido de la Entrega
-En este repositorio se subieron los siguientes directorios del servidor, comprimidos individualmente en formato `.tar.gz`:
+Este repositorio contiene la entrega final del Trabajo Práctico Integrador, estructurado según los requerimientos solicitados para el respaldo de los directorios del sistema.
 
-`root.tar.gz` - Archivos de configuración del usuario root.
-`etc.tar.gz` - Configuraciones generales del sistema (incluye el archivo `fstab` modificado).
-`opt.tar.gz` - Contiene los scripts desarrollados para la automatización (`backup_full.sh`).
-`www_dir.tar.gz` - Directorio raíz del servidor web Apache modificado.
-`backup_dir.tar.gz` - Directorio destino donde se almacenan los respaldos.
+ Contenido del Repositorio
+Los siguientes directorios fueron empaquetados de forma individual utilizando la herramienta `tar`:
+root.tar.gz: Respaldo del directorio `/root`
+etc.tar.gz: Respaldo del directorio `/etc`
+opt.tar.gz: Respaldo del directorio `/opt`
+www_dir.tar.gz: Respaldo del directorio `/www_dir`
+backup_dir.tar.gz: Respaldo del directorio `/backup_dir`
 
- División del Directorio /var
-El directorio `/var` ha sido comprimido y fragmentado en partes más pequeñas de 20MB para su carga:
- `var_part_aa`
-`var_part_ab`
-(y las partes correspondientes generadas).
+ Fraccionamiento de /var
+Debido al tamaño considerable del directorio `/var`, y para cumplir de forma óptima con la subida a la plataforma, se utilizó la herramienta `split` integrada con `tar` para segmentar el archivo comprimido en partes más pequeñas de 10MB:
+var_part_aa hasta var_part_ag
+
